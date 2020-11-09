@@ -1,14 +1,14 @@
-const { query }=require('../scripts/poolConnect')
+const { query } = require('../scripts/poolConnect')
+const testdata = require('./data/testdata')
 
-const sql = "INSERT INTO users (id SERIAL PRIMARY KEY, firstname TEXT, surname TEXT, address TEXT, email TEXT, phone INTEGER, image TEXT, isbootcamper BOOLEAN, industry TEXT, interests TEXT[])";
+const sql = "INSERT INTO users (firstname, surname, address, email, phone, image, isbootcamper, industry, interests) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)";
 
-const arrayData = [
-    
-]
+function populateTable() {
+    testdata.map(async (value) => {
+        const res = await query(sql, [value.firstname, value.surname, value.address, value.email, value.phone, value.image, value.isbootcamper, value.industry, value.interests]);
+        console.log(res)
+    })
 
-async function populateTable() {
-    const res = await query(sql);
-    console.log(res)
 }
 
 populateTable()

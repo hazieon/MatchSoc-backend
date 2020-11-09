@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
-    "create-table": "node -r dotenv/config db/scripts/createDatabase.js"
+    "create-table": "node -r dotenv/config db/scripts/createDatabase.js",
+    "populate-table": "node -r dotenv/config db/scripts/populateTable.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
