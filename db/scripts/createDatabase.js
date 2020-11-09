@@ -1,0 +1,10 @@
+const { query }=require('../scripts/poolConnect')
+
+const sql = "CREATE TABLE users (id SERIAL PRIMARY KEY, firstname TEXT, surname TEXT, address TEXT, email TEXT, phone INTEGER, image TEXT, isbootcamper BOOLEAN, industry TEXT, interests TEXT[])";
+
+async function createTable() {
+    const res = await query(sql);
+    console.log(res)
+}
+
+createTable()
