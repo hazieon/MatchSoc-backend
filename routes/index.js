@@ -1,8 +1,11 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/", function (req, res) {
-  res.json({ message: "the server is working..." });
+const { getAllUserData } = require("../model/index");
+
+router.get("/", async function (req, res) {
+  const allUsers = await getAllUserData();
+  res.json({ payload: allUsers });
 });
 
 module.exports = router;
