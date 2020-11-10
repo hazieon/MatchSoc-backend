@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www",
+    "start": "nodemon -r dotenv/config ./bin/www",
     "create-table": "node -r dotenv/config db/scripts/createDatabase.js",
     "populate-table": "node -r dotenv/config db/scripts/populateTable.js"
   },
