@@ -1,7 +1,11 @@
 const express = require("express");
 const router = express.Router();
 
-const { getAllUserData, getSpecificUser } = require("../model/index");
+const {
+  getAllUserData,
+  getSpecificUser,
+  postNewUser,
+} = require("../model/index");
 
 router.get("/", async function (req, res, next) {
   if (req.query.search) {
@@ -12,6 +16,12 @@ router.get("/", async function (req, res, next) {
 
   const allUsers = await getAllUserData();
   res.json({ payload: allUsers });
+});
+
+router.post("/", async function (req, res) {
+  console.log(req.body);
+  const newUser = await postNewUser(req.body);
+  res.json({ payload: newUser });
 });
 
 module.exports = router;

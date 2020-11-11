@@ -14,12 +14,13 @@ module.exports = {
   },
 
   postNewUser: async (user) => {
+    console.log(user + "from models");
     const sql =
       "INSERT INTO users (firstname, surname, address, email, phone, image, isbootcamper, industry, interests )  VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)";
     const res = await query(sql, [
       user.firstname,
       user.surname,
-      user.addres,
+      user.address,
       user.email,
       user.phone,
       user.image,
