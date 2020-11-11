@@ -30,4 +30,14 @@ module.exports = {
     ]);
     return { status: "success" };
   },
+  getBootcampers: async () => {
+    const sql = "SELECT * FROM user WHERE isbootcamper = true";
+    const res = await query(sql);
+    return res.rows;
+  },
+  getMentors: async () => {
+    const sql = "SELECT * FROM user WHERE isbootcamper = false";
+    const res = await query(sql);
+    return res.rows;
+  },
 };
