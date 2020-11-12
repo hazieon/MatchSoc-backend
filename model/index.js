@@ -46,4 +46,10 @@ module.exports = {
     console.log(`${id} Deleted`);
     return `${id} Deleted`;
   },
+
+  patchNewMatch: async (matchBootcamper, matchMentor) => {
+    const sql = "INSERT INTO users (matched with) VALUES $1 $2 WHERE ... ???";
+    const res = await query(sql, [matchBootcamper.id, matchMentor.id]);
+    return { status: "success" };
+  },
 };

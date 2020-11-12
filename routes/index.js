@@ -49,4 +49,9 @@ router.delete("/:id", async (req, res) => {
   });
 });
 
+router.patch("/match", async function (req, res) {
+  const match = await submitNewMatch(req.body);
+  res.json({ payload: match });
+});
+
 module.exports = router;
