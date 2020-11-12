@@ -46,4 +46,17 @@ module.exports = {
     console.log(`${id} Deleted`);
     return `${id} Deleted`;
   },
+
+  patchNewMatch: async (ids) => {
+    console.log(ids);
+    const { bootcamper, mentor } = ids;
+    const sql = "UPDATE users SET matchedwith = $1 WHERE id = $2";
+    await query(sql, [bootcamper, mentor]);
+    await query(sql, [mentor, bootcamper]);
+
+    return { status: "success" };
+  },
 };
+
+// const sql = "UPDATE users SET matchedwith = $2 WHERE id = $1";
+// UPDATE users SET matchedwith = $2 WHERE id = $1"

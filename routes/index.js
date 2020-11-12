@@ -8,6 +8,7 @@ const {
   getBootcampers,
   getMentors,
   deleteUser,
+  patchNewMatch,
 } = require("../model/index");
 
 router.get("/", async function (req, res, next) {
@@ -47,6 +48,11 @@ router.delete("/:id", async (req, res) => {
     success: true,
     message: result,
   });
+});
+
+router.patch("/match", async function (req, res) {
+  const match = await patchNewMatch(req.body);
+  res.json({ payload: match });
 });
 
 module.exports = router;
