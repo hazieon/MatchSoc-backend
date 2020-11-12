@@ -40,11 +40,12 @@ router.get("/mentors", async function (req, res) {
 });
 
 router.delete("/:id", async (req, res) => {
+  console.log(req.params.id);
   const id = req.params.id;
   const result = await deleteUser(id);
   res.json({
     success: true,
-    message: `User deleted with id of ${id}`,
+    message: result,
   });
 });
 
