@@ -7,6 +7,7 @@ const {
   postNewUser,
   getBootcampers,
   getMentors,
+  deleteUser,
 } = require("../model/index");
 
 router.get("/", async function (req, res, next) {
@@ -36,6 +37,15 @@ router.get("/mentors", async function (req, res) {
   const mentors = await getMentors();
   res.json({ payload: mentors });
   return;
+});
+
+router.delete("/:id", async (req, res) => {
+  const id = req.params.id;
+  const result = await deleteUser(id);
+  res.json({
+    success: true,
+    message: `User deleted with id of ${id}`,
+  });
 });
 
 module.exports = router;

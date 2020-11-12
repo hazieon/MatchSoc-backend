@@ -40,4 +40,8 @@ module.exports = {
     const res = await query(sql);
     return res.rows;
   },
+  deleteUser: async (id) => {
+    const res = await query(`DELETE FROM users WHERE id = ${id}`);
+    console.log(`${id} Deleted`);
+  },
 };
