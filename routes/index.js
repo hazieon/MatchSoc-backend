@@ -39,9 +39,15 @@ router.get("/mentors", async function (req, res) {
   return;
 });
 
-router.delete("/bootcampers/:id", async function (req, res) {
-  const result = await deleteUser(req.params.id);
-  res.json({ success: true });
+router.delete("/:id", async (req, res) => {
+  console.log(req.params.id);
+  const id = req.params.id;
+  const result = await deleteUser(id);
+  res.json({
+    success: true,
+    message: result,
+  });
+
 });
 
 module.exports = router;
