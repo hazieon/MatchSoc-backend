@@ -21,17 +21,6 @@ const testdataa = [{
   "interests": ["programming", "netflix", "plants", "running"],
   "matchedwith": "not currently matched with a mentor"
 }, {
-  "firstname": "Arshi",
-  "surname": "Sheikh",
-  "address": "5 South Street ROCHESTER  ME21 1PB",
-  "email": "Arshi@gmail.com",
-  "phone": "03572359873",
-  "image": "https://images.unsplash.com/photo-1595664248149-94356b1ae05c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
-  "isbootcamper": true,
-  "industry": "finance",
-  "interests": ["korean films", "programming", "technology"],
-  "matchedwith": "not currently matched with a mentor"
-}, {
   "firstname": "Becky",
   "surname": "Jones",
   "address": "9472 Springfield Road   LUTON  LU28 4OU",
@@ -52,17 +41,6 @@ const testdataa = [{
   "isbootcamper": true,
   "industry": "finance",
   "interests": ["surfing", "programming", "running", "coffee", "cake", "pets"],
-  "matchedwith": "not currently matched with a mentor"
-}, {
-  "firstname": "Dan",
-  "surname": "Watson",
-  "address": "8 Chester Road   MILTON KEYNES   MK62 9JE",
-  "email": "DanWatson@gmail.com",
-  "phone": "03472039573",
-  "image": "https://images.unsplash.com/photo-1584418879404-85eb6c39c30c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
-  "isbootcamper": true,
-  "industry": "fitness",
-  "interests": ["sports", "jokes", "family", "brownies", "exercise"],
   "matchedwith": "not currently matched with a mentor"
 }, {
   "firstname": "Emma",
@@ -129,17 +107,6 @@ const testdataa = [{
   "isbootcamper": true,
   "industry": "musician",
   "interests": ["music", "parties", "programming", "films"],
-  "matchedwith": "not currently matched with a mentor"
-}, {
-  "firstname": "Maxine",
-  "surname": "Tillman",
-  "address": "88 St. John’s Road SWANSEA  SA81 0LS",
-  "email": "Maxine@gmail.com",
-  "phone": "453453454",
-  "image": "https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-  "isbootcamper": true,
-  "industry": "cruise ships",
-  "interests": ["travel", "parties", "music", "dancing"],
   "matchedwith": "not currently matched with a mentor"
 }, {
   "firstname": "Kawalpreet",
@@ -223,17 +190,6 @@ const testdataa = [{
   "isbootcamper": false,
   "industry": "designer",
   "interests": ["UX design", "wellness", "fitness"],
-  "matchedwith": "not currently matched with a bootcamper"
-}, {
-  "firstname": "Josh",
-  "surname": "Farrant",
-  "address": "51 Park Avenue   KIRKCALDY   KY32 1MS",
-  "email": "Farrant@gmail.com",
-  "phone": "35352346",
-  "image": "https://images.unsplash.com/photo-1567752316810-57ad60ca5d50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
-  "isbootcamper": false,
-  "industry": "developer",
-  "interests": ["programming", "technology", "korean films"],
   "matchedwith": "not currently matched with a bootcamper"
 }, {
   "firstname": "Sean",
