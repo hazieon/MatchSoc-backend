@@ -131,17 +131,6 @@ const testdataa = [{
   "interests": ["swimming", "sports", "memes", "among us", "gaming"],
   "matchedwith": "not currently matched with a mentor"
 }, {
-  "firstname": "Will",
-  "surname": "Edwards",
-  "address": "58 Stanley Road TRURO TR45 1DB",
-  "email": "Ani@gmail.com",
-  "phone": "63463464",
-  "image": "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-  "isbootcamper": true,
-  "industry": "ICT",
-  "interests": ["programming", "games", "rpg", "cats"],
-  "matchedwith": "not currently matched with a mentor"
-}, {
   "firstname": "Hazie",
   "surname": "A",
   "address": "73 Maple Road  NOTTINGHAM  NG37 0EH",
