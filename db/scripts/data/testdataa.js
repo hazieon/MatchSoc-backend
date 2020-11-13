@@ -8,7 +8,7 @@ const testdataa = [{
   "isbootcamper": true,
   "industry": "management",
   "interests": ["music", "programming", "travel", "family"],
-  "matchedwith": "not currently matched with a mentor"
+  "matchedwith": "Amy Hooper"
 }, {
   "firstname": "Alice",
   "surname": "Holden",
@@ -216,7 +216,7 @@ const testdataa = [{
   "isbootcamper": false,
   "industry": "developer",
   "interests": ["cats", "baking", "reading", "programming", "running"],
-  "matchedwith": "not currently matched with a bootcamper"
+  "matchedwith": "Aftab Hussain"
 }, {
   "firstname": "Sam",
   "surname": "Dent",
