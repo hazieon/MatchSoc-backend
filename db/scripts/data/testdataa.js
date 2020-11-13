@@ -192,19 +192,6 @@ const testdataa = [{
   "interests": ["UX design", "wellness", "fitness"],
   "matchedwith": "not currently matched with a bootcamper"
 }, {
-  "firstname": "Sean",
-  "surname": "Kavanagh",
-  "address": "5 George Street BRISTOL  BS63 4JY",
-  "email": "Kavanagh@gmail.com",
-  "phone": "034025252",
-  "image": "https://unsplash.com/photos/IMYvZjlX3jE",
-  "isbootcamper": false,
-  "industry": "developer",
-  "interests": ["gaming", "cats", "cake", "coffee", "piano"],
-  "matchedwith": "not currently matched with a bootcamper"
-},
-
-{
   "firstname": "Tajinder",
   "surname": "Singh",
   "address": "90 Victoria Road NEWPORT NP54 1VB",
