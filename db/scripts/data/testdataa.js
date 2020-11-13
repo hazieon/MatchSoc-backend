@@ -262,7 +262,7 @@ const testdataa = [{
   "phone": "0784563453",
   "image": "https://images.unsplash.com/photo-1530650068191-e80dcd5ee0b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
   "isbootcamper": false,
-  "industry": "",
+  "industry": "software development",
   "interests": ["family", "travel", "music", "brownies", "baking", "exercise"],
   "matchedwith": "not currently matched with a bootcamper"
 }, {
