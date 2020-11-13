@@ -8,7 +8,7 @@ module.exports = {
   },
   getSpecificUser: async (user) => {
     const sql =
-      "SELECT * FROM users WHERE CONCAT (firstname, ' ', surname) LIKE $1 ORDER BY firstname ASC";
+      "SELECT * FROM users WHERE LOWER(CONCAT(firstname, ' ', surname)) LIKE $1 ORDER BY firstname ASC";
     const res = await query(sql, [`%%${user.toLowerCase()}%%`]);
     return res.rows;
   },
@@ -16,7 +16,7 @@ module.exports = {
   postNewUser: async (user) => {
     console.log(user + "from models");
     const sql =
-      "INSERT INTO users (firstname, surname, address, email, phone, image, isbootcamper, industry, interests )  VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)";
+      "INSERT INTO users (firstname, surname, address, email, phone, image, isbootcamper, industry, interests, matchedwith )  VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)";
     const res = await query(sql, [
       user.firstname,
       user.surname,
@@ -27,6 +27,7 @@ module.exports = {
       user.isbootcamper,
       user.industry,
       user.interests,
+      user.matchedwith
     ]);
     return { status: "success" };
   },
@@ -47,14 +48,12 @@ module.exports = {
     return `${id} Deleted`;
   },
 
-  patchNewMatch: async (ids) => {
-    console.log(ids);
-    const { bootcamper, mentor } = ids;
+  patchNewMatch: async (userMatchData) => {
+    const { bootcamperName, bootcamperId, mentorName, mentorId } = userMatchData;
     const sql = "UPDATE users SET matchedwith = $1 WHERE id = $2";
-    await query(sql, [bootcamper, mentor]);
-    await query(sql, [mentor, bootcamper]);
-
-    return { status: "success" };
+    await query(sql, [mentorName, bootcamperId]);
+    await query(sql, [bootcamperName, mentorId]);
+    return "bootcamper matched";
   },
 };
 
